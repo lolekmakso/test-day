@@ -74,6 +74,7 @@
 
   // --- КАРТИНКА ТОВАРУ---
   &__product-img-wrapper {
+    z-index: -1;
     position: absolute;
     right: 0;
     top: 45px;
@@ -88,6 +89,10 @@
     width: auto !important;
     display: flex;
     gap: 11px;
+
+    @media (max-width: 1919.9px) {
+      bottom: 0px !important;
+    }
   }
 
   .swiper-pagination-bullet {

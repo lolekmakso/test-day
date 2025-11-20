@@ -1,14 +1,176 @@
 .footer {
-	background-color: rgb(62, 62, 62);
-	padding: 50px 0;
-	font-size: 32px;
-    color: #fff;
+  background-color: #fcfcfc;
 
-	h1 {
-		font-size: 32px;
-	}
+  a {
+    color: #676767;
+    @include hover(color, #f4c22f);
+    @include active(color, #f4c22f);
+  }
 
-	@media (max-width: 1200px) {
-		font-size: 26px;
-	}
+  // --- ВЕРХНЯЯ ПОЛОСА ---
+  &__top {
+    background-color: #ffffff;
+  }
+
+  &__top-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 54px;
+    padding-bottom: 47px;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 30px;
+    img {
+      width: 35px;
+      height: 35px;
+
+      @include hover(transform, scale(1.1));
+      @include active(transform, scale(0.8));
+    }
+  }
+
+  &__contacts-line {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 150%;
+    color: #676767;
+  }
+
+  &__phone,
+  &__email {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 500;
+  }
+
+  // --- ОСНОВНАЯ СЕТКА ССЫЛОК ---
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 38px;
+    margin-bottom: 55px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__col {
+    min-width: 160px;
+
+    &--wide {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      gap: 110px;
+      max-width: 620px;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    color: #676767;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 10px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #f4c22f;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  // Адрес и карта
+  &__address-label {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: #676767;
+    margin-bottom: 13px;
+  }
+
+  &__divider {
+    width: 100%;
+    height: 2px;
+    background-color: #f4c22f;
+    margin: 20px 0;
+  }
+
+  &__map {
+    img {
+      max-width: 330px;
+      height: auto;
+    }
+  }
+
+  // --- НИЖНЯЯ ПОЛОСА ---
+  &__bottom {
+    border-top: 1px solid #d9d9d9;
+    padding-inline: 15px;
+  }
+
+  &__bottom-container {
+    padding: 9px 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #676767;
+  }
+
+  &__links {
+    display: flex;
+    gap: 40px;
+  }
+
+  &__payments {
+    display: flex;
+    gap: 24px;
+  }
+}
+
+// --- АДАПТИВ ---
+@media (max-width: 992px) {
+  .footer__top {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer__col--wide {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__main {
+    flex-direction: column;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
 }

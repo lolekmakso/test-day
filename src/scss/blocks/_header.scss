@@ -163,8 +163,8 @@
       stroke: #777;
     }
 
-    @include hover(color, #000);
-    @include active(color, #000);
+    @include hover(transform, translateY(-1px));
+    @include active(transform, translateY(1px));
   }
 
   &__icon-cart {

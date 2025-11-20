@@ -1,23 +1,26 @@
 import Swiper from "swiper/bundle";
-import "swiper/css/bundle";
 
-const promoSlider = new Swiper(".promo-swiper", {
-  slidesPerView: 1,
-  loop: true,
-  speed: 1000,
+function initPromoSlider() {
+  // Проверяем, есть ли слайдер на странице, чтобы не было ошибок
+  if (!document.querySelector(".promo-swiper")) return;
 
-  effect: "fade",
-  fadeEffect: {
-    crossFade: true,
-  },
+  const promoSlider = new Swiper(".promo-swiper", {
+    slidesPerView: 1,
+    loop: true,
+    speed: 1000,
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true,
+    },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination", // Убедись, что класс в HTML совпадает!
+      clickable: true,
+    },
+  });
+}
 
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
-
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
+export default initPromoSlider;
