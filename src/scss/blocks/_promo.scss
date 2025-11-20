@@ -1,0 +1,108 @@
+.promo {
+  &__container {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  // --- ЛІВА КАРТИНКА ---
+  &__image-box {
+    flex: 0 0 49%;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__main-img {
+    width: 100%;
+    height: auto;
+  }
+
+  // --- ПРАВИЙ БЛОК ---
+  &__content-box {
+    height: 700px;
+    position: relative;
+    flex: 1;
+    background-color: #f5f5f5;
+    padding: 107px 0px 0px 150px;
+    border-bottom-left-radius: 15px;
+
+    margin-left: -100px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    font-size: 96px;
+    line-height: 100%;
+    font-weight: 700;
+    color: #676767;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    max-width: 450px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    color: #676767;
+    margin-bottom: 30px;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 252px;
+    height: 50px;
+    gap: 12px;
+    background-color: #f4c22f;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    border-radius: 5px;
+
+    @include hover(opacity, 0.8);
+    @include active(opacity, 0.8);
+  }
+
+  // --- КАРТИНКА ТОВАРУ---
+  &__product-img-wrapper {
+    position: absolute;
+    right: 0;
+    top: 45px;
+  }
+
+  // --- swiper ---
+  .swiper-pagination {
+    position: absolute;
+    bottom: 150px !important;
+    left: calc(50% + 50px) !important;
+    transform: translateX(-50%);
+    width: auto !important;
+    display: flex;
+    gap: 11px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+
+    background: transparent;
+    border: 1px solid #f4c22f;
+    opacity: 1;
+    margin: 0 !important;
+    transition: background-color 0.3s ease;
+
+    &-active {
+      background-color: #f4c22f;
+    }
+  }
+}

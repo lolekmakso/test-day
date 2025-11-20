@@ -39,13 +39,12 @@
     @include hover(background-color, #f4c22f);
     @include active(opacity, 0.8);
 
-    // Жовта активна вкладка
     &--active {
       background-color: #f4c22f;
     }
   }
 
-  // --- НИЖНЯ ЧАСТИНА (Головна) ---
+  // --- НИЖНЯ ЧАСТИНА ---
   &__main {
     padding: 31px 0;
     background-color: #fff;
@@ -110,14 +109,13 @@
     }
   }
 
-  // --- ПРАВА ЧАСТИНА (Дії) ---
+  // --- ПРАВА ЧАСТИНА ---
   &__actions {
     display: flex;
     align-items: center;
     gap: 10px;
   }
 
-  // Пошук
   &__search {
     position: relative;
     display: flex;
@@ -140,7 +138,7 @@
     }
 
     &:focus-within {
-      border-color: #000; // Или твой $color-yellow
+      border-color: #000;
     }
 
     &-btn {
@@ -153,7 +151,6 @@
     }
   }
 
-  // Іконки (Кошик, Вхід)
   &__icon-link {
     display: flex;
     align-items: center;
