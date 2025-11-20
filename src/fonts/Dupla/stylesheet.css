@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Dual';
+    src: url('Dual-300.eot');
+    src: local('Dual 300'), local('Dual-300'),
+        url('Dual-300.eot?#iefix') format('embedded-opentype'),
+        url('Dual-300.woff2') format('woff2'),
+        url('Dual-300.woff') format('woff'),
+        url('Dual-300.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Dual';
+    src: url('Dual-100.eot');
+    src: local('Dual 100'), local('Dual-100'),
+        url('Dual-100.eot?#iefix') format('embedded-opentype'),
+        url('Dual-100.woff2') format('woff2'),
+        url('Dual-100.woff') format('woff'),
+        url('Dual-100.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Dual';
+    src: url('Dual-600.eot');
+    src: local('Dual 600'), local('Dual-600'),
+        url('Dual-600.eot?#iefix') format('embedded-opentype'),
+        url('Dual-600.woff2') format('woff2'),
+        url('Dual-600.woff') format('woff'),
+        url('Dual-600.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+

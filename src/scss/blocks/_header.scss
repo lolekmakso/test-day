@@ -1,10 +1,176 @@
 .header {
-	background-color: rgb(195, 220, 231);
-	padding: 50px 0;
+  background-color: #fff;
+  z-index: 10;
 
-	&__row {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
+  // --- ВЕРХНЯ ЧАСТИНА ---
+  &__top {
+    background-color: #f6f6f6;
+  }
+
+  &__top-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__top-nav {
+    display: flex;
+    gap: 1px;
+  }
+
+  &__tab {
+    width: 164px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 150%;
+    padding: 4px 0px 7px;
+    background-color: #b8b8b8;
+
+    &:first-child {
+      border-bottom-left-radius: 5px;
+    }
+
+    &:last-child {
+      border-bottom-right-radius: 5px;
+    }
+
+    @include hover(background-color, #f4c22f);
+    @include active(opacity, 0.8);
+
+    // Жовта активна вкладка
+    &--active {
+      background-color: #f4c22f;
+    }
+  }
+
+  // --- НИЖНЯ ЧАСТИНА (Головна) ---
+  &__main {
+    padding: 31px 0;
+    background-color: #fff;
+  }
+
+  &__main-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // --- ЛОГОТИП ---
+  &__logo-wrapper {
+    position: relative;
+    margin-top: -80px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__logo {
+    background-color: #ffffff;
+    padding: 30px 9px 9px;
+    border: 8px solid #f6f6f6;
+    border-top: none;
+    border-bottom-left-radius: 99px;
+    border-bottom-right-radius: 99px;
+    z-index: 2;
+  }
+
+  &__logo-img {
+    width: 93px;
+    height: auto;
+  }
+
+  &__flag {
+    position: absolute;
+    bottom: -10px;
+  }
+
+  // --- НАВІГАЦІЯ ---
+  &__nav {
+    margin-left: 40px;
+    display: flex;
+    gap: 43px;
+    flex: 1;
+
+    a {
+      color: #676767;
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 600;
+      white-space: nowrap;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0%;
+
+      @include hover(opacity, 0.8);
+      @include active(opacity, 0.8);
+    }
+  }
+
+  // --- ПРАВА ЧАСТИНА (Дії) ---
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  // Пошук
+  &__search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid #b8b8b8;
+    border-radius: 99px;
+    padding: 18px 19px 18px 43px;
+    width: 240px;
+    height: 50px;
+    margin-right: 18px;
+
+    &-input {
+      font-size: 16px;
+      width: 100%;
+      color: #777;
+
+      &::placeholder {
+        color: #8a8a8a;
+      }
+    }
+
+    &:focus-within {
+      border-color: #000; // Или твой $color-yellow
+    }
+
+    &-btn {
+      position: absolute;
+      left: 19px;
+      // padding: 0;
+      // margin-right: 10px;
+      // display: flex;
+      // align-items: center;
+    }
+  }
+
+  // Іконки (Кошик, Вхід)
+  &__icon-link {
+    display: flex;
+    align-items: center;
+    color: #777;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 400;
+
+    svg {
+      stroke: #777;
+    }
+
+    @include hover(color, #000);
+    @include active(color, #000);
+  }
+
+  &__icon-cart {
+    margin-right: 24px;
+  }
 }

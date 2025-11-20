@@ -1,11 +1,60 @@
 <header class="header">
-    <div class="container">
-        <div class="header__row">
-            <div class="logo">Logo</div>
-            <button class="mobile-nav-btn">
-                <div class="nav-icon"></div>
-            </button>
-        </div>
+  <div class="header__top">
+    <div class="container header__top-container">
+      <nav class="header__top-nav">
+        <a href="#" class="header__tab header__tab--active">Wholesale</a>
+        <a href="#" class="header__tab">Recipes</a>
+        <a href="#" class="header__tab">Blog</a>
+        <a href="#" class="header__tab">FAQ</a>
+      </nav>
     </div>
+  </div>
+
+  <div class="header__main">
+    <div class="container header__main-container">
+      <div class="header__logo-wrapper">
+        <a href="/" class="header__logo">
+          <img
+            src="./img/logo.png"
+            alt="Waffle Pantry"
+            class="header__logo-img"
+          />
+        </a>
+        <div class="header__flag">
+          <img src="./img/flag.png" alt="flag" />
+        </div>
+      </div>
+
+      <nav class="header__nav">
+        <a href="#">Belgian Pearl Sugar</a>
+        <a href="#">Liege Waffle Mix</a>
+        <a href="#">Liege Waffle Maker</a>
+        <a href="#">Speciality Ingredients</a>
+      </nav>
+
+      <div class="header__actions">
+        <form class="header__search">
+          <img
+            class="header__search-btn"
+            src="./img/icons/search.svg"
+            alt="search"
+          />
+          <input
+            type="text"
+            placeholder="Search"
+            class="header__search-input"
+          />
+        </form>
+
+        <a href="#" class="header__icon-link header__icon-cart">
+          <img src="./img/icons/cart.svg" alt="cart" />
+        </a>
+
+        <a href="#" class="header__icon-link header__icon-link--text">
+          <img src="./img/icons/login.svg" alt="login" />
+          <span>Sign In</span>
+        </a>
+      </div>
+    </div>
+  </div>
 </header>
-@@include('mobile-nav.html')
